@@ -2,7 +2,7 @@ using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
 using GraphQlCodemaze.Contracts;
 using GraphQlCodemaze.Entities.Context;
-using GraphQlCodemaze.Entities.GraphQL.GraphQLSchema;
+using GraphQlCodemaze.GraphQL.GraphQLSchema;
 using GraphQlCodemaze.Repository;
 using Microsoft.EntityFrameworkCore;
 

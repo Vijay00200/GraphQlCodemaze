@@ -2,11 +2,11 @@ using System;
 using GraphQL;
 using GraphQL.Types;
 using GraphQlCodemaze.Contracts;
-using GraphQlCodemaze.Entities.GraphQL.GraphQLTypes;
+using GraphQlCodemaze.GraphQL.GraphQLTypes;
 
-namespace GraphQlCodemaze.Entities.GraphQL.GraphQLQueries
+namespace GraphQlCodemaze.GraphQL.GraphQLQueries
 {
-    public class AppQuery:ObjectGraphType
+    public class AppQuery : ObjectGraphType
     {
         public AppQuery(IOwnerRepository repository)
         {
@@ -17,8 +17,8 @@ namespace GraphQlCodemaze.Entities.GraphQL.GraphQLQueries
 
             Field<OwnerType>(
                 "owner",
-                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<IdGraphType>>{Name = "ownerId"}),
-                resolve: context=>
+                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<IdGraphType>> { Name = "ownerId" }),
+                resolve: context =>
                 {
                     Guid id;
                     if (!Guid.TryParse(context.GetArgument<string>("ownerId"), out id))

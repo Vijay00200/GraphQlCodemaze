@@ -1,7 +1,8 @@
 using System;
 using GraphQL.Types;
+using GraphQlCodemaze.Entities;
 
-namespace GraphQlCodemaze.Entities.GraphQL.GraphQLTypes
+namespace GraphQlCodemaze.GraphQL.GraphQLTypes
 {
     public class AccountType : ObjectGraphType<Account>
     {

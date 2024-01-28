@@ -1,8 +1,8 @@
 using System;
 using GraphQL.Types;
-using GraphQlCodemaze.Entities.GraphQL.GraphQLQueries;
+using GraphQlCodemaze.GraphQL.GraphQLQueries;
 
-namespace GraphQlCodemaze.Entities.GraphQL.GraphQLSchema
+namespace GraphQlCodemaze.GraphQL.GraphQLSchema
 {
     public class AppSchema : Schema
     {
@@ -10,6 +10,7 @@ namespace GraphQlCodemaze.Entities.GraphQL.GraphQLSchema
             : base(provider)
         {
             Query = provider.GetRequiredService<AppQuery>();
+            Mutation = provider.GetRequiredService<AppMutation>();
         }
     }
 }

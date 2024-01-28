@@ -2,5 +2,4 @@
 /obj
 
 app.db
-server-20240127-160850.log
-server-20240127-203621.log
+server-2024*.log

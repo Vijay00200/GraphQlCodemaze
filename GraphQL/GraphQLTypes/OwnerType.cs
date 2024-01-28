@@ -2,8 +2,9 @@ using System;
 using GraphQL.DataLoader;
 using GraphQL.Types;
 using GraphQlCodemaze.Contracts;
+using GraphQlCodemaze.Entities;
 
-namespace GraphQlCodemaze.Entities.GraphQL.GraphQLTypes
+namespace GraphQlCodemaze.GraphQL.GraphQLTypes
 {
     public class OwnerType : ObjectGraphType<Owner>
     {
